@@ -1,0 +1,14 @@
+ORIG_PN="libzeitgeist"
+inherit gnome2
+
+DESCRIPTION="Zeitgeist GObject client library"
+HOMEPAGE="http://zeitgeist-project.com/"
+SRC_URI="http://launchpad.net/${ORIG_PN}/${PV[1]}.${PV[2]}/${PV}/+download/${ORIG_PN}-${PV}.tar.gz"
+PATCH_URI="0.3.10-no-undefined.patch"
+
+PKG_NAMES="libzeitgeist1.0_1 libzeitgeist1.0-devel vala-zeitgeist1.0"
+libzeitgeist1_0_1_CONTENTS="usr/bin/cygzeitgeist-1.0-1.dll"
+libzeitgeist1_0_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/ usr/share/gtk-doc/"
+vala_zeitgeist1_0_CONTENTS="usr/share/vala/vapi/zeitgeist-1.0.*"
+
+MAKEOPTS+=" zeitgeistdocdir= "
