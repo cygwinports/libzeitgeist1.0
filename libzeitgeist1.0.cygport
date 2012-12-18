@@ -1,7 +1,14 @@
 ORIG_PN="libzeitgeist"
 inherit gnome2
 
-DESCRIPTION="Zeitgeist GObject client library"
+NAME="libzeitgeist1.0"
+VERSION=0.3.18
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="Zeitgeist GObject client library"
+DESCRIPTION="This project provides a client library for applications that want
+to interact with the Zeitgeist daemon. The library is written in C using glib
+and provides an asynchronous GObject oriented API."
 HOMEPAGE="http://zeitgeist-project.com/"
 SRC_URI="http://launchpad.net/${ORIG_PN}/${PV[1]}.${PV[2]}/${PV}/+download/${ORIG_PN}-${PV}.tar.gz"
 PATCH_URI="0.3.10-no-undefined.patch"
